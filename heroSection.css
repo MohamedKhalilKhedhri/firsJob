@@ -25,7 +25,7 @@ h2{
     color: white;
 }
 .heroText{
-    font-size: clamp(0.75rem, 1rem, 1.5rem);
+    font-size: clamp(0.75rem, 1.075rem, 1.5rem);
 }
 .heroHeadline{
     font-size: clamp(2rem, 5vw + 1rem, 5rem);
@@ -195,7 +195,6 @@ h2{
     display: flex;
     gap: 0.5rem;
     align-items: start;
-    width: 400px;
     padding: 20px;
  
   }
@@ -229,7 +228,7 @@ h2{
   .secondSection{
     margin-top: 8rem;
     width: 100%;
-    height: 50vh;
+    min-height: 50vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("assets/image1.jpg");
     background-position: center;
     background-size: cover;
@@ -260,7 +259,6 @@ h2{
     flex-direction: column;
     gap: 10px;
     color: white;
-    width: 300px;
     background-color: #23457A;
     padding: 20px;
     border-radius: 5px;
@@ -272,7 +270,7 @@ h2{
   }
   
   .secondSectionCard-text {
-    font-size: 1rem;
+    font-size: 1.075rem;
    
   
   }
@@ -296,11 +294,23 @@ h2{
         font-size: 15px;
       
     }
+
+    .featuresSection,.secondSection{
+        padding: 0 6rem;
+    }
+    .features{
+        flex-direction: column;
+    }
+    .secondSectionCard{
+        padding:15px ;
+    }
+   
+    
 }
 
 @media only screen and (max-width : 768px) {
     
-    .heroSection{
+    .heroSection,.secondSection{
         padding: 4rem;
     }
     .cta1, .cta2{
@@ -309,24 +319,36 @@ h2{
         font-size: 14px;
       
     }
+    .featuresSection{
+        padding: 0 4rem;
+    }
+    .secondSectionCards{
+       flex-direction: column;
+    }
 }
 
 
 @media only screen and (max-width : 640px) {
     
-    .heroSection{
+    .heroSection,.secondSection{
         padding: 2rem;
     }
     .cta1, .cta2{
        font-size: 13px;
+    }
+    .featuresSection{
+        padding: 0 2rem;
     }
 }
 
 
 @media only screen and (max-width : 360px) {
     
-    .heroSection{
+    .heroSection,.secondSection{
         padding: 0.75rem;
+    }
+    .featuresSection{
+        padding: 0 0.75rem;
     }
     
 }

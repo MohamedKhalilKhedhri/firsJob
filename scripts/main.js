@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         event.stopPropagation(); // Prevent click from bubbling up to the signUpForm div
     });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxy4cClH67bLWu0kSbU3zc4VNUwifzjQFLUCmwv6lle86rXN3MpX1K8r0ONGe2c89Z3/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwW5-An7AM9BGLMd7DcbzhUm_iA-4gQUYZeH1LMDVd__2_iHuXyBqHi24AmJtAcVym6/exec';
 
     emailInput.classList.add('filledInput');
     nameInput.classList.add('filledInput'); 

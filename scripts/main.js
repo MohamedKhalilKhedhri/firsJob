@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const loader = document.querySelector('.loader');
     const submitText = document.getElementById('submit-text');
     const secondCta1Button = document.getElementById('joinWaitlist');
+    const thirdCta1Button = document.getElementById('joinWaitlist2');
 
   
     whatsupButton.addEventListener("click", () => {
@@ -26,6 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     secondCta1Button.addEventListener("click", () => {
+        signUpForm.style.display = 'flex'; // Show the sign-up form
+    });
+    thirdCta1Button.addEventListener("click", () => {
         signUpForm.style.display = 'flex'; // Show the sign-up form
     });
     signUpForm.addEventListener("click", (event) => {

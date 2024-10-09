@@ -353,6 +353,29 @@ h2{
     background-color: #0056b3; 
    
 }
+/* alst section styling*/
+
+.lastSection{
+    margin-top: 8rem;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    padding: 0 8rem;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+    background-color: #F9FAFB;
+    box-shadow: 0 -0.5px 2px rgba(0, 0, 0, 0.2);
+}
+.lastSection h1{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2.25rem);
+    color: #2F2F2F;
+}
+.lastSection p{
+    font-size: 1.075rem;
+    color: #6B7280;
+}
 /* responsive */
 @media only screen and (max-width : 1024px) {
     
@@ -366,7 +389,7 @@ h2{
       
     }
 
-    .featuresSection,.secondSection,.signUpSection{
+    .featuresSection,.secondSection,.signUpSection,.lastSection{
         padding: 0 6rem;
     }
     .features{
@@ -394,7 +417,7 @@ h2{
     .secondSection{
         justify-content: center;
     }
-    .featuresSection,.signUpSection{
+    .featuresSection,.signUpSection,.lastSection{
         padding: 0 4rem;
     }
     .secondSectionCards{
@@ -427,7 +450,7 @@ h2{
     .secondSection{
         justify-content: flex-start;
     }
-    .featuresSection,.signUpSection{
+    .featuresSection,.signUpSection,.lastSection{
         padding: 0 2rem;
     }
     .signUpSectionImgContainer{
@@ -448,7 +471,7 @@ h2{
     .heroSection,.secondSection{
         padding: 0.75rem;
     }
-    .featuresSection,.signUpSection{
+    .featuresSection,.signUpSection,.lastSection{
         padding: 0 0.75rem;
     }
    

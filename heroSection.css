@@ -4,6 +4,13 @@
     list-style-type: none;
     box-sizing: border-box;
 }
+
+h1,h2,p{ font-family: 'Roboto', sans-serif;}
+h2{
+    font-weight: 400;
+}
+
+/* hero section styling */
 .heroSection {
     width: 100%;
     height: 100vh;
@@ -38,7 +45,6 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    font-weight: 600;
     transition: .1s ease-out;
 }
 .cta1{
@@ -60,6 +66,7 @@
     color: black; 
     
 }
+/*  form styling */
 .signUpForm{
     position: fixed;
     top: 0;
@@ -157,6 +164,127 @@
     background-color: #357ae8; /* Darker shade of Google blue */
 }
 
+
+
+/* features section styling */
+.featuresSection {
+    margin-top: 8rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: start;
+    align-items: center;
+    padding: 0 8rem;
+  }
+  
+  .featuresSectionHeader {
+    font-size: clamp(1.2rem, 2vw + 1rem, 2.25rem);
+    text-align: center;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 2rem;
+   
+  }
+  
+  .feature {
+    display: flex;
+    gap: 0.5rem;
+    align-items: start;
+    width: 400px;
+    padding: 20px;
+ 
+  }
+  
+  .number-box {
+    background-color: #4285F4;
+    padding: 5px 10px;
+    color: white;
+    font-size: 1.2rem;
+    
+  }
+  
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .text-box-header {
+    font-size: 1.5rem;
+    color: #2F2F2F;
+  }
+  
+  .text-box-text {
+    font-size: 1.075rem;
+    color: #6B7280;
+  }
+
+  /* second section styling*/
+
+  .secondSection{
+    margin-top: 8rem;
+    width: 100%;
+    height: 50vh;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("assets/image1.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 8rem;
+  }
+  .secondSectionContent{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.secondSectionHeadline{
+    font-size: clamp(1.2rem, 2vw + 1rem, 2.25rem);
+    color: white;
+    text-align: start;
+    
+}
+.secondSectionCards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+   
+}
+.secondSectionCard{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    width: 300px;
+    background-color: #23457A;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.secondSectionCard-header {
+    font-size: 1.5rem;
+   
+  }
+  
+  .secondSectionCard-text {
+    font-size: 1rem;
+   
+  
+  }
+
+  /* 3rd section styling is same as feature section except some changes*/
+
+  .featureBackground{
+    background-color: #F9FAFB;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+  }
+/* responsive */
 @media only screen and (max-width : 1024px) {
     
     .heroSection{

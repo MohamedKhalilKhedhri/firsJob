@@ -167,7 +167,7 @@ h2{
 
 
 
-/* features section styling */
+/* features(second) and third sections styling */
 .featuresSection {
     margin-top: 8rem;
     display: flex;
@@ -224,18 +224,19 @@ h2{
     color: #6B7280;
   }
 
-  /* second section styling*/
+  /* second and fourth sections styling */
 
   .secondSection{
     margin-top: 8rem;
     width: 100%;
-    min-height: 50vh;
+    min-height: 70vh;
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("assets/image1.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     padding: 0 8rem;
+    justify-content: center;
   }
   .secondSectionContent{
     display: flex;
@@ -260,7 +261,6 @@ h2{
     flex-direction: column;
     gap: 10px;
     color: white;
-    background-color: #23457A;
     padding: 20px;
     border-radius: 5px;
 }
@@ -274,6 +274,17 @@ h2{
     font-size: 1.075rem;
    
   
+  }
+  .secondSectionCard-bg{
+    background-color: #23457A;
+  }
+  .secondSectionCard-number{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+    background-color: #23457A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
   }
 
   /* 3rd section styling is same as feature section except some changes*/
@@ -364,6 +375,7 @@ h2{
     .secondSectionCard{
         padding:15px ;
     }
+    
    
     
 }
@@ -379,11 +391,17 @@ h2{
         font-size: 14px;
       
     }
+    .secondSection{
+        justify-content: center;
+    }
     .featuresSection,.signUpSection{
         padding: 0 4rem;
     }
     .secondSectionCards{
        flex-direction: column;
+    }
+    .secondSectionCard {
+        align-items: center;
     }
     .signUpSection{
         flex-direction: column;
@@ -391,6 +409,9 @@ h2{
     }
     .signUpSectionImgContainer{
         width: 400px;
+    }
+    .secondSectionCard-number{
+        width: 70%;
     }
 }
 
@@ -403,6 +424,9 @@ h2{
     .cta1, .cta2{
        font-size: 13px;
     }
+    .secondSection{
+        justify-content: flex-start;
+    }
     .featuresSection,.signUpSection{
         padding: 0 2rem;
     }
@@ -412,6 +436,9 @@ h2{
     .signUpSection{
         align-items: flex-start;
        
+    }
+    .secondSectionCard {
+        align-items: flex-start;
     }
 }
 

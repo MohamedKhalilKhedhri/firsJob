@@ -103,11 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(response => {
                     loader.style.display = 'none';
                     submitText.textContent = 'Sign up';
+                    alert("Thank you! Your form is submitted successfully.");
+                    
+                    signUpForm.style.display = 'none';
                     nameInput.value = '';
                     emailInput.value = '';
                     countryInput.value = '';
-                    alert("Thank you! Your form is submitted successfully.");
-                    signUpForm.style.display = 'none';
                 })
                 .catch(error => {
                     loader.style.display = 'none';

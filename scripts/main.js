@@ -11,17 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const countryLengthError = document.getElementById('country-length-error');
     const loader = document.querySelector('.loader');
     const submitText = document.getElementById('submit-text');
+    const secondCta1Button = document.getElementById('joinWaitlist');
 
+  
     whatsupButton.addEventListener("click", () => {
         const phoneNumber = "+9613520173"; 
         const url = `https://wa.me/${phoneNumber}`; 
         window.open(url, "_blank"); 
     });
 
+
     cta1Button.addEventListener("click", () => {
         signUpForm.style.display = 'flex'; // Show the sign-up form
     });
 
+    secondCta1Button.addEventListener("click", () => {
+        signUpForm.style.display = 'flex'; // Show the sign-up form
+    });
     signUpForm.addEventListener("click", (event) => {
         // Close the form if the click is outside the form itself
         if (event.target === signUpForm) {

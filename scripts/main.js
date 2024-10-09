@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let isValid = true;
 
-        if (nameInput.value) {
+        if (nameInput.value.trim()) {
             if (nameInput.value.length < 3 || nameInput.value.length > 30) {
                 nameInput.classList.remove('filledInput');
                 nameInput.classList.add('emptyInput');
@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
             isValid = false;
         }
 
-        if (emailInput.value) {
+        if (emailInput.value.trim()) {
             emailInput.classList.remove('emptyInput');
             emailInput.classList.add('filledInput');
             emailError.style.display = 'none'; 
@@ -103,13 +103,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(response => {
                     loader.style.display = 'none';
                     submitText.textContent = 'Sign up';
+                    nameInput.value = '';
+                    emailInput.value = '';
+                    countryInput.value = '';
                     alert("Thank you! Your form is submitted successfully.");
                     signUpForm.style.display = 'none';
                 })
                 .catch(error => {
                     loader.style.display = 'none';
                     submitText.textContent = 'Sign up';
+                    alert("There was an error submitting the form. Please try again.");
                     console.error('Error!', error.message);
+                    signUpForm.style.display = 'none';
                 });
         } else {
             loader.style.display = 'none';
@@ -118,3 +123,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+

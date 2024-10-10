@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const nameError = document.getElementById('name-error');
     const nameLengthError = document.getElementById('name-length-error');
     const emailError = document.getElementById('email-error');
-    const countryLengthError = document.getElementById('country-length-error');
     const loader = document.querySelector('.loader');
     const submitText = document.getElementById('submit-text');
     const secondCta1Button = document.getElementById('joinWaitlist');
     const thirdCta1Button = document.getElementById('joinWaitlist2');
-
+    const CloseForm = document.getElementById('CloseForm');
+    
   
     whatsupButton.addEventListener("click", () => {
         const phoneNumber = "+9613520173"; 
@@ -21,7 +21,9 @@ document.addEventListener("DOMContentLoaded", () => {
         window.open(url, "_blank"); 
     });
 
-
+    CloseForm.addEventListener("click", () => {
+        signUpForm.style.display = 'none'; // close the sign-up form
+    });
     cta1Button.addEventListener("click", () => {
         signUpForm.style.display = 'flex'; // Show the sign-up form
     });
@@ -44,11 +46,10 @@ document.addEventListener("DOMContentLoaded", () => {
         event.stopPropagation(); // Prevent click from bubbling up to the signUpForm div
     });
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwW5-An7AM9BGLMd7DcbzhUm_iA-4gQUYZeH1LMDVd__2_iHuXyBqHi24AmJtAcVym6/exec';
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwHJzpFzKwU9nX0IX3PgP-Xg1J4YsUsBeSRNHsnzaDFLOfzBT7bqD5nQ9yeMl2qYNs/exec';
 
     emailInput.classList.add('filledInput');
     nameInput.classList.add('filledInput'); 
-    countryInput.classList.add('filledInput')
     loader.style.display = 'none';
     form.addEventListener('submit', e => {
         e.preventDefault(); 
@@ -90,31 +91,19 @@ document.addEventListener("DOMContentLoaded", () => {
             isValid = false;
         }
 
-        if (countryInput.value) {
-            if (countryInput.value.length < 4 || countryInput.value.length > 56) {
-                countryInput.classList.remove('filledInput');
-                countryInput.classList.add('emptyInput');
-                countryLengthError.style.display = 'block';
-                isValid = false;
-            } else {
-                countryInput.classList.remove('emptyInput');
-                countryInput.classList.add('filledInput');
-                countryLengthError.style.display = 'none';
-            }
-        } 
-        else{
-            countryInput.classList.remove('emptyInput');
-            countryInput.classList.add('filledInput');
-            countryLengthError.style.display = 'none';
-        }
+   
 
         if (isValid) {
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
                     loader.style.display = 'none';
                     submitText.textContent = 'Sign up';
-                    alert("Thank you! Your form is submitted successfully.");
-                    
+                    swal({
+                        text: "Thank you for your submission. We will notify you by email once the product is ready.",
+                        icon: "success",
+                        showCloseButton: true,
+                        closeButtonAriaLabel: 'Close this alert',
+                      });
                     signUpForm.style.display = 'none';
                     nameInput.value = '';
                     emailInput.value = '';
@@ -123,7 +112,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 .catch(error => {
                     loader.style.display = 'none';
                     submitText.textContent = 'Sign up';
-                    alert("There was an error submitting the form. Please try again.");
+                    swal({
+                        text: "There was an error submitting the form. Please try again.",
+                        icon: "warning",
+                        showCloseButton: true,
+                        closeButtonAriaLabel: 'Close this alert',
+                  
+                      });
                     console.error('Error!', error.message);
                     signUpForm.style.display = 'none';
                 });
@@ -133,5 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         }
     });
+
+    
 });
 
